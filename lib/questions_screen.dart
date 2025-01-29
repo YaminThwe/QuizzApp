@@ -25,13 +25,13 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         currentQuestionIndex++;
       } else {
         // Navigate to the Result Screen
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) =>
-        //         ResultScreen(selectedAnswers: selectedAnswers),
-        //   ),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                ResultScreen(selectedAnswers: selectedAnswers),
+          ),
+        );
       }
     });
   }

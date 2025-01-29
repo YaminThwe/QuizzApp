@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ResultScreen extends StatelessWidget {
-  const ResultScreen({super.key});
+  const ResultScreen({super.key, required this.selectedAnswers});
+
+  final List<String> selectedAnswers;
 
   @override
   Widget build(BuildContext context) {
