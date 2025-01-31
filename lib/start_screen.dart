@@ -7,7 +7,15 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return Center(
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.deepPurple, Colors.purple],
+            ),
+          ),
+          child: Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -49,6 +57,11 @@ class StartScreen extends StatelessWidget {
           )
         ],
       ),
+    ),
+        )
+        
+      )
     );
+    
   }
 }
