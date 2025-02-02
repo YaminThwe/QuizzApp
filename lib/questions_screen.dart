@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/answers_button.dart';
 import 'package:myapp/data/quizz.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/result_screen.dart';
 
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key});
@@ -20,17 +21,17 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   void answerQuestion(String selectedAnswer) {
     setState(() {
       selectedAnswers.add(selectedAnswer);
-      if (currentQuestionIndex < questions.length - 1) {  
+      if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
       } else {
         // Navigate to the Result Screen
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) =>
-        //         ResultScreen(selectedAnswers: selectedAnswers),
-        //   ),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                ResultScreen(selectedAnswers: selectedAnswers),
+          ),
+        );
       }
     });
   }
